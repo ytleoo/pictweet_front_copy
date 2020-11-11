@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: #666;
+}
+
+body {
+  background-color: #f5f5f3;
+  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+
+/*--------レイアウト---------*/
+.header {
+  width: 100%;
+  background: #fff;
+  
+  padding:5px;
+  border-bottom: 1px solid #D8D8D8;
+  
+  position: fixed;
+  z-index: 1;
+}
+
+.main {
+  padding: 50px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+/*---------headerパーツ-----------*/
+.header_box {
+  width: 660px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
+  
+  line-height: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.nav {
+  position: relative;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name {
+    height: 50px;
+    letter-spacing: 3px;
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -70px;
+}
+
+.post {
+    border: 2px solid #57C3E9;
+    color: #57C3E9;
+    width: 120px;
+    height: 42px;
+  
+    padding: 9px 26px;
+    border-radius: 3px;
+    margin-top: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/*------コンテンツパーツ--------*/
+.contents {
+  width: 660px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.content {
+  height: 400px;
+  background: url("images/sunrise-1756274_1920.jpg") no-repeat center center;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  
+  background-size: cover;
+  border-radius: 3px;
+}
+
+.more {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 100px;
+}
+
+.content_text {
+  position: absolute;
+  bottom: 30px;
+  color: #fff;
+}
+
+.content_name {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.content_name span {
+  font-size: 11px;
+  display: block;
+}
+
+footer p {
+  letter-spacing: 3px;
+  color: #D8D8D8;
+}
+
+
+/*ーーーーーーーー追加実装ーーーーーーーー*/
+.title:hover {
+  color: #57C3E9;
+  transition: 0.5s;
+}
+
+.name span {
+  font-size: 12px;
+}
+
+.user_info {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: -70px;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+.user_info_item {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 10px 19px;
+  letter-spacing: 2px;
+}
+
+.user_info_link:hover {
+  color: #57C3E9;
+  transition: 0.5s;
+}
+
+.name:hover .user_info {
+  display: block;
+}
+
+.post:hover {
+  border: 2px solid #a9d9ea;
+  color: #a9d9ea;
+  transition: 0.5s;
+}
+
+.more:hover > .more_list {
+  display: block;
+}
+
+.more_list {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  border-radius: 3px;
+  background: #f0f0f0;
+  width: 85px;
+  display: none;
+}
+
+.more_item {
+  font-size: 13px;;
+  border-bottom: 1px solid #d8d8d8;
+  list-style-type: none;
+  padding: 2px 25px;
+  letter-spacing: 2px;
+  padding: 5px;
+}
+
+.more_item:hover {
+  background: #57C3E9;
+  transition: 0.5s;
+}
+
+.more_item:hover .more_item_link {
+  color: #fff;
+}
