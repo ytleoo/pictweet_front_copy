@@ -1,0 +1,2 @@
+# pictweet_front_copy
+フロント模写勉強会用pictweetのindex模写コード
