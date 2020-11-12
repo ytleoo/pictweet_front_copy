@@ -16,12 +16,6 @@ body {
 .header {
   width: 100%;
   background: #fff;
-  
-  padding:5px;
-  border-bottom: 1px solid #D8D8D8;
-  
-  position: fixed;
-  z-index: 1;
 }
 
 .main {
@@ -50,20 +44,9 @@ footer {
 }
 
 .nav {
-  position: relative;
   font-size: 12px;
   display: flex;
   justify-content: flex-end;
-}
-
-.name {
-    height: 50px;
-    letter-spacing: 3px;
-    font-size: 16px;
-    display: block;
-    position: absolute;
-    top: 12px;
-    left: -70px;
 }
 
 .post {
@@ -71,14 +54,26 @@ footer {
     color: #57C3E9;
     width: 120px;
     height: 42px;
-  
-    padding: 9px 26px;
-    border-radius: 3px;
     margin-top: 3px;
+    padding: 9px 26px;
+
+    border-radius: 3px;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 2px;
 }
+
+.name {
+    height: 50px;
+    letter-spacing: 3px;
+    font-size: 16px;
+  
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -70px;
+}
+
 
 /*------コンテンツパーツ--------*/
 .contents {
@@ -88,21 +83,21 @@ footer {
 }
 
 .content {
-  height: 400px;
   background: url("images/sunrise-1756274_1920.jpg") no-repeat center center;
-  margin: 20px 0;
+  height: 400px;
   padding: 30px;
   position: relative;
   
   background-size: cover;
   border-radius: 3px;
+
+  margin: 20px 0;
 }
 
 .more {
   position: absolute;
   top: 20px;
   right: 30px;
-  height: 100px;
 }
 
 .content_text {
@@ -115,53 +110,29 @@ footer {
   position: absolute;
   bottom: 30px;
   right: 30px;
-  font-size: 15px;
-  letter-spacing: 2px;
 }
 
-.content_name span {
-  font-size: 11px;
-  display: block;
-}
+/*-------------footer--------------*/
 
 footer p {
   letter-spacing: 3px;
   color: #D8D8D8;
 }
 
-
 /*ーーーーーーーー追加実装ーーーーーーーー*/
+/*----position: fixedの重なり順検索----*/
+.header {
+  padding:5px;
+  border-bottom: 1px solid #D8D8D8;
+  
+  position: fixed;
+  z-index: 1;
+}
+
+/*----css マウスのせると変わる 検索----*/
 .title:hover {
   color: #57C3E9;
   transition: 0.5s;
-}
-
-.name span {
-  font-size: 12px;
-}
-
-.user_info {
-  display: block;
-  position: absolute;
-  top: 45px;
-  left: -70px;
-  background-color: #f0f0f0;
-  display: none;
-}
-
-.user_info_item {
-  border-bottom: 1px solid #d8d8d8;
-  padding: 10px 19px;
-  letter-spacing: 2px;
-}
-
-.user_info_link:hover {
-  color: #57C3E9;
-  transition: 0.5s;
-}
-
-.name:hover .user_info {
-  display: block;
 }
 
 .post:hover {
@@ -170,27 +141,32 @@ footer p {
   transition: 0.5s;
 }
 
-.more:hover > .more_list {
-  display: block;
-}
-
+/*----moreメニューのHTML実装後----*/
 .more_list {
+  background: #f0f0f0;
+  width: 85px;
+  border-radius: 3px;
+
   position: absolute;
   right: 0;
   top: 25px;
-  border-radius: 3px;
-  background: #f0f0f0;
-  width: 85px;
+  
   display: none;
 }
 
 .more_item {
-  font-size: 13px;;
   border-bottom: 1px solid #d8d8d8;
-  list-style-type: none;
-  padding: 2px 25px;
+  font-size: 13px;
   letter-spacing: 2px;
   padding: 5px;
+}
+
+.more:hover > .more_list {
+  display: block;
+}
+
+.more {
+    height: 100px;
 }
 
 .more_item:hover {
@@ -201,3 +177,51 @@ footer p {
 .more_item:hover .more_item_link {
   color: #fff;
 }
+
+/*文字の大きさを整えるテクニック spanタグの使い方*/
+.name span {
+  font-size: 12px;
+}
+
+.content_name {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.content_name span {
+  font-size: 11px;
+  display: block;
+}
+
+/*時間が余ったらメニュー実装とpositionの応用としてやる*/
+.nav {
+  position: relative;
+}
+
+.user_info {
+  background-color: #f0f0f0;
+  display: block;
+  
+  position: absolute;
+  top: 45px;
+  left: -70px;
+  
+  display: none;
+}
+
+.user_info_item {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 10px 19px;
+  letter-spacing: 2px;
+}
+
+.name:hover .user_info {
+  display: block;
+}
+
+.user_info_link:hover {
+  color: #57C3E9;
+  transition: 0.5s;
+}
+
+
